@@ -5,9 +5,9 @@ import java.time.LocalDateTime;
 public class DateTime_Server{
 	public static void main(String []args){
 		try{
+			DatagramSocket ds = new DatagramSocket(2323);
 			while(true){
 
-				DatagramSocket ds = new DatagramSocket(2323);
 				byte []receive_data = new byte[64000];
 				DatagramPacket in = new DatagramPacket(receive_data,receive_data.length);
 				ds.receive(in);
@@ -24,9 +24,6 @@ public class DateTime_Server{
 					DatagramPacket out = new DatagramPacket(send_data,length_data,address,port);
 					ds.send(out);
 				}
-
-				
-
 			}
 
 		}

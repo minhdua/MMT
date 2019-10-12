@@ -1,7 +1,8 @@
 ## Convert data type
 
 -**toString()**: convert to string
--**Integer.valueOf(String).intValue() or Integer.parseInt(String)**-**String.getBytes()**: convert to bytes from string
+-**Integer.valueOf(String).intValue() or Integer.parseInt(String)** 
+-**String.getBytes()**: convert to bytes from string
 
 ##  String
 
@@ -24,9 +25,11 @@
 - **DatagramPacket(data,length data)**: packet receive
 
 ## InetAddress
-- **import java.net.InetAddress**
+- **java.net.InetAddress**
 - **getAddress()**: Returns the raw IP address of this InetAddress object.
 - **getHostName()**: Gets the host name for this IP address.
+- **getAllByName(String host)**: Given the name of a host, returns an array of its IP addresses, based on the configured name service on the system.
+- **getByName(String host)**: Determines the IP address of a host, given the host's name.
 
 ##  Socket
 - **import java.net.Socket**
@@ -163,3 +166,37 @@
 - **DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss")**
 - **LocalDateTime now  LocalDateTime.now();**
 - **dtf.format(now)**
+
+## BufferedReader
+- **java.io.Reader**
+- **BufferedReader(Reader in)**: Creates a buffering character-input stream that uses a default-sized input buffer.
+- **BufferedReader(Reader in, in sz)**:Creates a buffering character-input stream that uses an input buffer of the specified size.
+- **close()**:Closes the stream and releases any system resources associated with it.
+- **line()**:Returns a Stream, the elements of which are lines read from this BufferedReader.
+- **read()**:Reads a single character.
+- **readLine()**:Reads a line of text.
+- **skip(long n)**: Skips characters.
+
+## OutputStreamWriter
+- **java.io.Writer**
+- **BufferedWriter(Writer out)** :Creates a buffered character-output stream that uses a default-sized output buffer.
+- **BufferedWriter(Writer out, int sz)**: Creates a new buffered character-output stream that uses an output buffer of the given size.
+- **close()**:Close
+- **flush()**: Flushes the stream.s the stream, flushing it first.
+- **newLine()**: Writes a line separator.
+- **write(int c)**: Writes a single character.
+- **write(String s, int off, int len)**: Writes a portion of a String.
+## InputStreamReader
+- **java.io.Reader**
+- **InputStreamReader(InputStream in)**: Creates an InputStreamReader that uses the default charset.
+- **close()**: Closes the stream and releases any system resources associated with it.
+- **read()**: Reads a single character.
+- **ready()**: Tells whether this stream is ready to be read.
+## OutputStreamWriter
+- **java.io.Writer**
+- **OutputStreamWriter(OutputStream out)**: Creates an OutputStreamWriter that uses the default character encoding.
+- **close()**: Closes the stream, flushing it first.
+- **flush()**:  Flushes the stream.
+- **write(String str, int off, int len)**: Writes a portion of a string.
+
+
